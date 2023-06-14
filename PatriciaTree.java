@@ -64,7 +64,8 @@ public class PatriciaTree {
                         {
                             split.setvLig(k, aux.getvLig(k)); 
                             aux.setvLig(k, null);                        
-                        }
+                        }    
+                   
                         posPalavra = resto_palavra.charAt(0) - 'a'; 
                         aux.setvLig(posPalavra, split);
                         resto_palavra = palavra.substring(i);
