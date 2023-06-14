@@ -83,6 +83,21 @@ public class PatriciaTree {
         }
     }
 
- 
+    private void exibe(String palavra, No raiz)
+    {
+        palavra = palavra.concat(raiz.getPalavra());
+            for(int i = 0; i < 26; i++)
+                if(raiz.getvLig(i) != null)
+                    exibe(palavra, raiz.getvLig(i));     
+            if(raiz.getFlag())
+                System.out.print(""+palavra+", ");
+    }
+
+    public void exibirPalavras(){
+        String palavra = "";  
+        System.out.print("{");      
+        exibe(palavra, raiz);
+        System.out.print("}\n"); 
+    }
 
 }

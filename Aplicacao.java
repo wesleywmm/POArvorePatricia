@@ -2,19 +2,26 @@ public class Aplicacao {
     
     public static void main(String[] args) {
         
-        PatriciaTree tree = new PatriciaTree(new No());
-        tree.inserirPatriciaTree("bee");
-        tree.inserirPatriciaTree("bear");
-        tree.inserirPatriciaTree("bird");
-        tree.inserirPatriciaTree("bell");
-        tree.inserirPatriciaTree("car");
-        tree.inserirPatriciaTree("card");
-        tree.inserirPatriciaTree("notebook");
-        tree.inserirPatriciaTree("notepad");
-        tree.inserirPatriciaTree("family");
-        tree.inserirPatriciaTree("mooney");
-        tree.inserirPatriciaTree("beautiful");
-        tree.inserirPatriciaTree("monkey");
+        PatriciaTree arvPatricia = new PatriciaTree(new No());
+        arvPatricia.inserirPatriciaTree("bee");
+        arvPatricia.inserirPatriciaTree("bear");
+        arvPatricia.inserirPatriciaTree("bird");
+        arvPatricia.inserirPatriciaTree("bell");
+        arvPatricia.inserirPatriciaTree("car");
+        arvPatricia.inserirPatriciaTree("card");
+        arvPatricia.inserirPatriciaTree("notebook");
+        arvPatricia.inserirPatriciaTree("notepad");
+        arvPatricia.inserirPatriciaTree("family");
+        arvPatricia.inserirPatriciaTree("mooney");
+        arvPatricia.inserirPatriciaTree("beautiful");
+        arvPatricia.inserirPatriciaTree("elephant ");
+        arvPatricia.inserirPatriciaTree("element");
+        arvPatricia.inserirPatriciaTree("electric");
+        arvPatricia.inserirPatriciaTree("elevator");
+
+
+        System.out.println("----------------------Palavras----------------------\n");
+        arvPatricia.exibirPalavras();
     }
 
 }
