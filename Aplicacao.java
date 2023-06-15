@@ -19,9 +19,11 @@ public class Aplicacao {
         arvPatricia.inserirPatriciaTree("electric");
         arvPatricia.inserirPatriciaTree("elevator");
 
-
-        System.out.println("----------------------Palavras----------------------\n");
+        System.out.println("\n----------------------Palavras----------------------\n");
         arvPatricia.exibirPalavras();
+        System.out.println("\n-----------------Palavras Nivel-------------------\n");
+        arvPatricia.exibirEmNivel();
+
     }
 
 }

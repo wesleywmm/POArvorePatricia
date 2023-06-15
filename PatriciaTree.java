@@ -94,11 +94,35 @@ public class PatriciaTree {
                 System.out.print(""+palavra+", ");
     }
 
-    public void exibirPalavras(){
+    public void exibirPalavras()
+    {
         String palavra = "";  
         System.out.print("{");      
         exibe(palavra, raiz);
         System.out.print("}\n"); 
+    }
+
+    public void exibirEmNivel()
+    {
+        FilaPatricia fila = new FilaPatricia();
+        NoFila auxFila;
+        No aux = raiz;
+        int nivel = 0;
+
+        fila.enqueue(raiz, nivel);
+        while(!fila.isEmpty())
+        {
+            auxFila = fila.dequeue();
+            nivel = auxFila.getNivel();
+            aux = auxFila.getArv();
+
+            if(aux.getPalavra() != "")  //nao exibir raiz 
+                System.out.println("Nivel:"+auxFila.getNivel()+" Palavra: "+auxFila.getArv().getPalavra());
+            for(int i = 0; i < 26; i++)
+                if(aux.getvLig(i)!=null)
+                    fila.enqueue(aux.getvLig(i), nivel+1);
+            
+        }
     }
 
 }
