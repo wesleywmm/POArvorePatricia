@@ -60,7 +60,7 @@ public class PatriciaTree {
                         split.setFlag(aux.getFlag());
                         aux.setFlag(false);
 
-                        for(int k = 0; k < 26; k++)
+                        for(int k = 0; k < 26; k++) //copiando ligações
                         {
                             split.setvLig(k, aux.getvLig(k)); 
                             aux.setvLig(k, null);                        
@@ -82,24 +82,6 @@ public class PatriciaTree {
                         }      
             }
         }
-    }
-
-    private void exibe(String palavra, No raiz)
-    {
-        palavra = palavra.concat(raiz.getPalavra());
-            for(int i = 0; i < 26; i++)
-                if(raiz.getvLig(i) != null)
-                    exibe(palavra, raiz.getvLig(i));     
-            if(raiz.getFlag())
-                System.out.print(""+palavra+", ");
-    }
-
-    public void exibirPalavras()
-    {
-        String palavra = "";  
-        System.out.print("{");      
-        exibe(palavra, raiz);
-        System.out.print("}\n"); 
     }
 
     public void exibirEmNivel()
@@ -125,4 +107,23 @@ public class PatriciaTree {
         }
     }
 
+    private void exibe(String palavra, No raiz)
+    {
+        palavra = palavra.concat(raiz.getPalavra());
+            for(int i = 0; i < 26; i++)
+                if(raiz.getvLig(i) != null)
+                    exibe(palavra, raiz.getvLig(i));     
+            if(raiz.getFlag())
+                System.out.print(""+palavra+", ");
+    }
+
+    public void exibirPalavras()
+    {
+        String palavra = "";  
+        System.out.print("{");      
+        exibe(palavra, raiz);
+        System.out.print("}\n"); 
+    }
+
+    
 }
