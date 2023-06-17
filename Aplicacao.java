@@ -1,6 +1,11 @@
 public class Aplicacao {
-    
-    public static void executa()
+ 
+    public Aplicacao()
+    {
+        
+    }
+
+    public void executa()
     {
         PatriciaTree arvPatricia = new PatriciaTree(new No());
         arvPatricia.inserirPatriciaTree("bee");
@@ -26,10 +31,11 @@ public class Aplicacao {
 
     }
 
-
+    
     public static void main(String[] args) {
-        
-        executa();
+
+        Aplicacao aplicacao = new Aplicacao();
+        aplicacao.executa();
     }
 
 }
