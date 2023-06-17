@@ -1,7 +1,7 @@
 public class Aplicacao {
     
-    public static void main(String[] args) {
-        
+    public static void executa()
+    {
         PatriciaTree arvPatricia = new PatriciaTree(new No());
         arvPatricia.inserirPatriciaTree("bee");
         arvPatricia.inserirPatriciaTree("bear");
@@ -24,6 +24,12 @@ public class Aplicacao {
         System.out.println("\n-----------------Palavras Nivel-------------------\n");
         arvPatricia.exibirEmNivel();
 
+    }
+
+
+    public static void main(String[] args) {
+        
+        executa();
     }
 
 }
